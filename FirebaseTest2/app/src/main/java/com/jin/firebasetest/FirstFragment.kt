@@ -13,6 +13,8 @@ import androidx.navigation.fragment.findNavController
  */
 class FirstFragment : Fragment() {
 
+    val firebaseManager = FirebaseManager()
+
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
@@ -24,8 +26,23 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.button_first).setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        view.findViewById<Button>(R.id.btn_add_docs)
+            .setOnClickListener {
+            firebaseManager.addRandomErrorData()
         }
+
+        view.findViewById<Button>(R.id.btn_update_docs)
+            .setOnClickListener {
+                firebaseManager.updateDocuments()
+            }
+
+        view.findViewById<Button>(R.id.btn_counter_added) .setOnClickListener {
+            firebaseManager.counterAdded()
+        }
+
+        view.findViewById<Button>(R.id.btn_query)
+            .setOnClickListener {
+                firebaseManager.querySampleDoc()
+            }
     }
 }

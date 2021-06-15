@@ -6,23 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <TextView
-        android:id="@+id/textview_first"
+    <Button
+        android:id="@+id/btn_add_docs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
+        android:text="submit random error"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="100dp"
+        />
 
     <Button
-        android:id="@+id/button_first"
+        android:id="@+id/btn_update_docs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="update doc"
+        app:layout_constraintTop_toBottomOf = "@+id/btn_add_docs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:id="@+id/btn_counter_added"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="counter add"
+        app:layout_constraintTop_toBottomOf = "@+id/btn_update_docs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:id="@+id/btn_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sample query"
+        app:layout_constraintTop_toBottomOf = "@+id/btn_counter_added"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="50dp"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
